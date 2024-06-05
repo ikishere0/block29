@@ -1,13 +1,267 @@
 body {
-  font-family: Georgia, serif;
-  background-color: #f8f8f8;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-image: url(./assets/book.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #4286f4;
 }
 
-#logo-image {
-  width: 30px;
-  margin-right: 10px;
+.home {
+  text-align: center;
+  padding: 100px 0;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform 0.3s;
 }
 
-/* Add your own custom styles here */
+.logo {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 3em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.single-book {
+  /* background-color: white; */
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+  transition: transform 0.3s;
+}
+
+/* .single-book img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+} */
+
+.single-book h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.single-book p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.navBar {
+  /* background-color: white; */
+  padding: 10px 0;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 20px;
+}
+
+.navBar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.checked-out-books ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.checked-out-books li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navBar li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.navBar a {
+  text-decoration: none;
+  color: #4286f4;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.navBar a:hover {
+  color: #373b44;
+}
+
+.login {
+  text-align: center;
+  padding: 20px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border-radius: 5px;
+  margin: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+
+.login h2 {
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #4286f4;
+}
+
+.login label {
+  font-size: 1.5em;
+}
+
+.register {
+  text-align: center;
+  padding: 20px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  border-radius: 5px;
+  margin: 20px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+
+.register h2 {
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.register input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #4286f4;
+}
+
+.register label {
+  font-size: 1.5em;
+}
+
+.register ::placeholder {
+  color: #4286f4;
+  font-size: 1.5em;
+}
+
+.login ::placeholder {
+  color: #4286f4;
+  font-size: 1.5em;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4286f4;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #373b44;
+}
+
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 1;
+}
+
+.popup h1 {
+  position: static;
+  text-align: center;
+  margin-left: 2%;
+  margin-top: 5vh;
+  color: #373b44;
+}
+
+.popup p {
+  position: static;
+  text-align: center;
+  margin-left: 0;
+  margin-top: 5vh;
+  color: #373b44;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.popup img {
+  max-width: 300px;
+}
+
+#close-popup {
+  font-size: 40px;
+  /* color: white; */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.account {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.123);
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  transition: transform 0.3s;
+  font-size: 2.5rem;
+  font-weight: 600;
+}

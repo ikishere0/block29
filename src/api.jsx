@@ -1,3 +1,17 @@
+const API_URL = "https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api";
+
+async function fetchAllBooks() {
+  try {
+    const response = await fetch(`${API_URL}/books`);
+    const result = await response.json();
+    console.log(result.books);
+    return result.books;
+  } catch (error) {
+    console.error(error);
+  }
+}
+export { fetchAllBooks };
+
 const Base_Url = "https://fsa-book-buddy-b6e748d1380d.herokuapp.com/api";
 
 export const registerUser = (userData) => {
@@ -12,6 +26,7 @@ export const registerUser = (userData) => {
     .then((response) => response.json())
     .then((data) => {
       if (data.token) {
+        console.log(data.token);
         return data.token;
       } else {
         throw new Error(data.message || "failed to register new user");
