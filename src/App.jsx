@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import bookLogo from "./assets/books.png";
 import Books from "./components/Books";
 import Account from "./components/Account2";
@@ -38,6 +39,25 @@ function App() {
         </Routes>
       </div>
     </Router>
+=======
+import { useState } from "react";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import AllPlayers from "./components/AllPlayers";
+import SinglePlayer from "./components/SinglePlayer";
+import NewPlayerForm from "./components/NewPlayerForm";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<AllPlayers />} />
+        <Route path="/players/:id" element={<SinglePlayer />} />
+      </Routes>
+    </>
+>>>>>>> 81f1d0710e74f710235f59beebc7c87b1fb43185
   );
 }
 

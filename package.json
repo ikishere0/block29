@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "unit4-library-starter",
+=======
+  "name": "block29",
+>>>>>>> 81f1d0710e74f710235f59beebc7c87b1fb43185
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +16,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
@@ -23,5 +28,18 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "vite": "^4.4.5"
+=======
+    "react-router-dom": "^6.23.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "vite": "^5.2.0"
+>>>>>>> 81f1d0710e74f710235f59beebc7c87b1fb43185
   }
 }
