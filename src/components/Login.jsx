@@ -1,5 +1,6 @@
 /* TODO - add your code to create a functional React component that renders a login form */
-import { useState } from "react";
+
+import React, { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -24,52 +25,35 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         setLogin(true);
-        sessionStorage.setItem("token", data.token);
-        console.log("data:", data.token);
-        setEmail("");
-        setPassword("");
-        setTimeout(() => {
-          setLogin(false);
-        }, 3000);
+        sessionStorage.setItem('token', data.token);
       } else {
         setError("Login failed");
-        setTimeout(() => {
-          setError(null);
-        }, 3000);
       }
     } catch (err) {
       setError("Login failed");
-      setTimeout(() => {
-        setError(null);
-      }, 3000);
     }
   };
 
   return (
-    <div className="login">
+    <div className="login-container">
+      <div className="login">
       <h2>Login</h2>
       {error && (
         <p
           style={{
             color: "red",
-            fontSize: "2rem",
+            fontSize: "1.5rem",
             fontWeight: "bold",
           }}
         >
           {error}
         </p>
       )}
-      {login && (
-        <p
-          style={{
-            color: "green",
-            fontSize: "2rem",
-            fontWeight: "bold",
-          }}
-        >
-          Login successful
-        </p>
-      )}
+      {login && <p style={{
+        color: "green",
+        fontSize: "1.5rem",
+        fontWeight: "bold",
+      }}>Login successful</p>}
       <form onSubmit={handleSubmit}>
         <label>
           Email:
@@ -88,7 +72,8 @@ const Login = () => {
           />
         </label>
         <button type="submit">Login</button>
-      </form>
+        </form>
+      </div>
     </div>
   );
 };
